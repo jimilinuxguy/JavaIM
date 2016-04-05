@@ -33,8 +33,6 @@ public class ClientGUI extends JFrame implements ActionListener {
 	private JMenu mnFile;
 	private JMenuItem mntmQuit;
 	static final long serialVersionUID = 1234567890;
-	private JTabbedPane tabbedPane;
-	
 
 	// Constructor connection receiving a socket number
 	ClientGUI(String host, int port) {

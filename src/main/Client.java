@@ -146,7 +146,9 @@ public class Client  {
 	public static void main(String[] args) throws Exception {
 		// default values
 		int portNumber = 6667;
-		String userName = "ChatUser";
+		Random generator = new Random(); 
+		String randomNumber = Integer.toString(generator.nextInt(1000) + 1);
+		String userName = "ChatUser" + randomNumber;
 		if (args.length == 1) {
 			userName = args[0];	
 		}
