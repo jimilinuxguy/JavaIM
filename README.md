@@ -7,3 +7,5 @@ The client can be ran by evecuting the java Client, with the parameters username
 * /join <String> - Creates/joins a topic
 * /part <String> - Parts a topic
 * /quit - Disconnects client from server
+* /tell <target> <message> - Sends a direct / private message to the client
+
