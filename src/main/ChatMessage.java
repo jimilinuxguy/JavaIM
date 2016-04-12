@@ -9,6 +9,8 @@ public class ChatMessage implements Serializable {
 	static final int QUIT = 2;
 	static final int JOIN = 3;
 	static final int PART = 4;
+	static final int DIRECT = 5;
+	
 	static final long serialVersionUID = 1233211;	
 	
 	private int type;

@@ -242,6 +242,8 @@ public class ClientGUI extends JFrame implements ActionListener {
 				messageType = ChatMessage.QUIT;
 			} else if (chatInputMessage.getText().contains("/join ")) {
 				messageType = ChatMessage.JOIN;
+			} else if (chatInputMessage.getText().contains("/tell ")) {
+				messageType = ChatMessage.DIRECT;
 			}
 			client.sendMessage(new ChatMessage(messageType, chatInputMessage.getText()));  
 			chatInputMessage.setText("");

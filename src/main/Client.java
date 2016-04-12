@@ -4,27 +4,20 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 
-/*
- * The Client that can be run both as a console or a GUI
- */
 public class Client  {
 
-	// for I/O
 	private ObjectInputStream sInput;		// to read from the socket
 	private ObjectOutputStream sOutput;		// to write on the socket
 	private Socket socket;
 
-	// if I use a GUI or not
 	private ClientGUI cg;
 	
 	private String username;
 	private int port;
 
 	/**
-	 * 
-	 * @param server A string containing the value to use  for the server name or IP address to connect to
-	 * @param port An integer defining the port that we are going to connect to
-	 * @param username A string value for the chat client's name/handle
+	 * @param port Integer representing a port to connect to
+	 * @param username String value for username
 	 * @param cg Instance of Client GUI class
 	 */
 	Client(int port, String username, ClientGUI cg) {

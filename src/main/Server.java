@@ -185,8 +185,24 @@ public class Server {
 				// the messaage part of the ChatMessage
 				String message = cm.getMessage();
 				// Switch on the type of message receive
+				System.out.println("Type = " + cm.getType());
 				switch(cm.getType()) {
-
+				case ChatMessage.DIRECT:
+					String[] parts = message.split(" ");
+					String userTarget = parts[1];
+					String msg = parts[2];
+					System.out.println("Target = " + userTarget);
+					System.out.println("Message = " + msg);
+					
+					for (int i = 0; i < clients.size(); i++) {
+						ClientThread ct = clients.get(i);
+						System.out.println("Thread name = " + ct.username);
+						if (ct.username.toLowerCase().equals(userTarget.toLowerCase())) {
+							System.out.println("Sending message");
+							ct.writeMsg(username + " told you directly: " +msg);
+						}
+					}
+					break;
 				case ChatMessage.MESSAGE:
 					broadcast(username + ": " + message);
 					break;
